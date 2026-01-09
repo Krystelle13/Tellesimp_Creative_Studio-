@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tellesimp Creative Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    background: #fdfdfd;
+    color: #2f2f2f;
+    line-height: 1.7;
+}
+
+/* ================= NAV (STICKY) ================= */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to right, #ffffff, #f1f1f1);
+    border-bottom: 2px solid #d8c690;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-brand img {
+    width: 45px;
+}
+
+nav h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #bfa24b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #5a5a5a;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #bfa24b;
+}
+
+/* ================= HERO ================= */
+.hero {
+    background: linear-gradient(to bottom, #e6d98c, #f6f1d1);
+    text-align: center;
+    padding: 130px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* WELCOME EFFECT */
+.hero h2 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #7a6a2a;
+    animation: explode 1.2s ease forwards;
+}
+
+/* GLOW / BURST */
+@keyframes explode {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+        text-shadow: 0 0 0 rgba(191,162,75,0);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.15);
+        text-shadow: 0 0 35px rgba(191,162,75,0.9);
+    }
+    100% {
+        transform: scale(1);
+        text-shadow: 0 0 18px rgba(191,162,75,0.6);
+    }
+}
+
+/* INTRO TEXT */
+.hero p {
+    max-width: 820px;
+    margin: 30px auto 0;
+    font-size: 17px;
+    color: #4d4d4d;
+    animation: fadeSlide 1.8s ease forwards;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 90px 40px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+}
+
+/* ================= SERVICES ================= */
+#services {
+    background: #dbcfab;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e1e1e1;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card h3 {
+    color: #bfa24b;
+    margin-bottom: 10px;
+}
+
+/* ================= PORTFOLIO ================= */
+#portfolio {
+    background: #bdbdbd;
+}
+
+.portfolio-controls {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.portfolio-controls button {
+    background: linear-gradient(to bottom, #ffffff, #ededed);
+    border: 2px solid #cfcfcf;
+    padding: 12px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.portfolio-controls button:hover {
+    border-color: #bfa24b;
+    color: #bfa24b;
+}
+
+.portfolio-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.portfolio-grid img {
+    width: 100%;
+    border-radius: 16px;
+    background: #dbdbdb;
+    border: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.portfolio-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* ================= ABOUT ================= */
+#about {
+    background: #fff3ce;
+}
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+}
+
+/* ================= CONTACT ================= */
+#contact {
+    background: #dbdbdb;
+}
+
+.contact {
+    text-align: center;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: linear-gradient(to right, #8b8b8b, #c4c71d);
+    border-top: 2px solid #d8c690;
+    text-align: center;
+    padding: 22px;
+    color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-brand">
+        <img src="images/TS TELLESIMP CREATIVE STUDIO LOGO.jpg" alt="Tellesimp Creative Studio Logo">
+        <h1>Tellesimp Creative</h1>
+    </div>
+    <ul>
+        <li><a href="#hero">Homepage</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="hero">
+    <h2>"Welcome to Tellesimp Creative Studio"</h2>
+    <p>
+        We are a creative studio dedicated to delivering elegant, modern, and professional digital solutions that blend simplicity with sophistication. This website showcases our expertise in website development, graphic design, document layout, and presentation design—each crafted with a gold and silver theme to evoke a clean, premium, and eye-friendly experience. At Tellesimp, we believe in turning complex ideas into refined visual results that not only look stunning but also communicate effectively and drive results. Whether you're a business seeking a standout online presence, a brand needing cohesive visuals, or an individual wanting polished documents, our team focuses on clarity, balance, and thoughtful details that leave a lasting impression. Explore our services below, dive into our portfolio for inspiration, and discover how we can elevate your projects. Ready to bring your vision to life? Let's create something extraordinary together—scroll down to get started!
+    </p>
+</section>
+
+<section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+        <div class="card"><h3>Website Development</h3><p>Modern, responsive, and user-friendly websites.</p></div>
+        <div class="card"><h3>Graphic Design</h3><p>Logos, branding, and visual identities.</p></div>
+        <div class="card"><h3>Document Design</h3><p>Professional formatting and clean layouts.</p></div>
+        <div class="card"><h3>Presentation Design</h3><p>Engaging and elegant presentation slides.</p></div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2 class="section-title">Portfolio</h2>
+    <div class="portfolio-controls">
+        <button onclick="togglePortfolio('logos')">Logo Designs</button>
+        <button onclick="togglePortfolio('fonts')">Font Designs</button>
+    </div>
+
+    <div class="portfolio-grid" id="logos">
+        <img src="images/portfolio/logo1.jpg" alt="Logo Design 1">
+        <img src="images/portfolio/logo2.jpg" alt="Logo Design 2">
+        <img src="images/portfolio/logo3.jpg" alt="Logo Design 3">
+    </div>
+
+    <div class="portfolio-grid" id="fonts">
+        <img src="images/portfolio/font1.jpg" alt="Font Design 1">
+        <img src="images/portfolio/font2.jpg" alt="Font Design 2">
+        <img src="images/portfolio/font3.jpg" alt="Font Design 3">
+    </div>
+</section>
+
+<section id="about">
+    <h2 class="section-title">About Us</h2>
+    <p class="about">
+        Tellesimp Creative Studio focuses on simplicity, elegance, and clarity. Our goal is to provide designs that are not only visually appealing but also meaningful and effective. We believe in clean layouts, balanced colors, and thoughtful details that leave a lasting impression.
+    </p>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact">
+        <p>Email: yourbusiness@email.com</p>
+        <p>Phone: 0912 345 6789</p>
+    </div>
+</section>
+
+<footer>
+    <p><strong>© 2026 Tellesimp Creative Studio</strong></p>
+</footer>
+
+<script>
+function togglePortfolio(id) {
+    const grids = document.querySelectorAll('.portfolio-grid');
+    const target = document.getElementById(id);
+
+    if (target.style.display === "grid") {
+        target.style.display = "none";
+    } else {
+        grids.forEach(g => g.style.display = "none");
+        target.style.display = "grid";
+    }
+}
+
+// Function to replay hero animations on Homepage click
+document.querySelector('a[href="#hero"]').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent default scroll
+    const heroH2 = document.querySelector('.hero h2');
+    const heroP = document.querySelector('.hero p');
+    
+    // Remove animation classes to reset
+    heroH2.style.animation = 'none';
+    heroP.style.animation = 'none';
+    
+    // Force reflow to reset animations
+    heroH2.offsetHeight; // Trigger reflow
+    heroP.offsetHeight;
+    
+    // Re-add animations
+    heroH2.style.animation = 'explode 1.2s ease forwards';
+    heroP.style.animation = 'fadeSlide 1.8s ease forwards';
+    
+    // Scroll to hero
+    document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
+
+</body>
+</html>
